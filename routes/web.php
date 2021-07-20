@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('index');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('questions', 'PersonalityQuestionController@index');
+
+
+// graduation
+Route::get('graduation', 'GraduationController@index')->name('graduation.index');
+Route::get('graduation/eight-semester', 'GraduationController@eightSemester')->name('graduation.eight-semester');
+Route::post('graduation/predict', 'GraduationController@predict')->name('graduation.predict');
 Auth::routes();
 
