@@ -16,6 +16,4 @@ class PersonalityQuestionController extends Controller
         ];
         return view('question', $data);
     }
-
-    
 }
